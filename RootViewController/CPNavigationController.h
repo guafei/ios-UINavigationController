@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+//最好的方式还是交给对应的VC来实现backBtn
+
+typedef enum
+{
+    NAV_ACTION_POPSELF = 0,
+    NAV_ACTION_TOROOTVIEW
+}NAV_ACTION;
+
 @interface CPNavigationController : UINavigationController
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController action:(SEL)action hidesBackButton:(BOOL) hidden ;
+- (id)initWithRootViewController:(UIViewController *)rootViewController hidesBackButton:(BOOL) hidden ;
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated action:(NAV_ACTION)action;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ThirdPageViewController.h"
+#import "CPNavigationController.h"
 
 @interface ThirdPageViewController ()
 
@@ -42,9 +43,9 @@
     
     //http://stackoverflow.com/questions/19365260/self-navigationcontroller-poptorootviewcontrolleranimatedyes-do-not-pop-back-to
     
-    self.navigationItem.hidesBackButton = YES;
-    UIBarButtonItem *backBtn =[[UIBarButtonItem alloc]initWithTitle:@"back" style:UIBarButtonItemStyleDone target:self action:@selector(popToRoot:)];
-    self.navigationItem.leftBarButtonItem=backBtn;
+    //    self.navigationItem.hidesBackButton = YES;
+    //    UIBarButtonItem *backBtn =[[UIBarButtonItem alloc]initWithTitle:@"back" style:UIBarButtonItemStyleDone target:self action:@selector(popToRoot:)];
+    //    self.navigationItem.leftBarButtonItem=backBtn;
     // Do any additional setup after loading the view.
 }
 
@@ -59,19 +60,16 @@
     
 }
 
-- (IBAction)popToRoot:(UIBarButtonItem*)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

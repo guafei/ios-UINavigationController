@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1C58717F-4D64-4C32-BBAE-B5052A99C67D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RootViewController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>46C9E263-F4B1-449C-BE89-9CA871799380</key>
+		<string>https://github.com/guafei/ios-UINavigationController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RootViewController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>46C9E263-F4B1-449C-BE89-9CA871799380</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/guafei/ios-UINavigationController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>46C9E263-F4B1-449C-BE89-9CA871799380</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>46C9E263-F4B1-449C-BE89-9CA871799380</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-UINavigationController</string>
+		</dict>
+	</array>
+</dict>
+</plist>

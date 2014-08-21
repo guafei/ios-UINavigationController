@@ -10,10 +10,5 @@
 #import "FirstPageViewController.h"
 
 @interface SecondPageViewController : UIViewController
-{
-    BOOL _isPop;
-}
-
-@property (nonatomic,strong)FirstPageViewController *firstVC;
 
 @end

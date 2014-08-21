@@ -8,6 +8,7 @@
 
 #import "SecondPageViewController.h"
 #import "ThirdPageViewController.h"
+#import "CPNavigationController.h"
 
 @interface SecondPageViewController ()
 
@@ -24,39 +25,10 @@
     return self;
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    
-//    NSLog(@"SecondPageViewController viewWillAppear called");
-//    if(_isPop)
-//    {
-//        NSLog(@"self.navigationController is %@",self.navigationController);
-////        [self dismissModalViewControllerAnimated:NO];
-//        [self.navigationController popViewControllerAnimated:NO];
-////        [self.navigationController popToViewController:_firstVC animated:YES];
-////        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:NO];
-//    }
-//}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if(_isPop)
-    {
-        //        [self dismissModalViewControllerAnimated:NO];
-//        [self.navigationController popViewControllerAnimated:YES];
-        //        [self.navigationController popToViewController:_firstVC animated:YES];
-                [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:NO];
-    }
-
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    _isPop = NO;
+    
     self.view.backgroundColor = [UIColor greenColor];
     UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 40)];
     secondLabel.textAlignment = NSTextAlignmentCenter;
@@ -70,6 +42,7 @@
     
     [self.view addSubview:secondLabel];
     [self.view addSubview:secondBtn];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -82,22 +55,19 @@
 - (IBAction)secondBtnClicked:(id)sender
 {
     ThirdPageViewController *thirdVC = [[ThirdPageViewController alloc] init];
-    [self.navigationController pushViewController:thirdVC animated:NO];
-    _isPop = YES;
-    
-    
-//    thirdVC.secondVC = self;
+    CPNavigationController *cpnav = (CPNavigationController *)self.navigationController;
+    [cpnav pushViewController:thirdVC animated:YES action:NAV_ACTION_TOROOTVIEW];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

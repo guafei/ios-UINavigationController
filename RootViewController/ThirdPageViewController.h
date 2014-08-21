@@ -11,6 +11,5 @@
 
 @interface ThirdPageViewController : UIViewController
 
-@property (nonatomic,strong)SecondPageViewController *secondVC;
 
 @end

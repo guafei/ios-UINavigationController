@@ -8,6 +8,7 @@
 
 #import "FirstPageViewController.h"
 #import "SecondPageViewController.h"
+#import "CPNavigationController.h"
 
 @interface FirstPageViewController ()
 
@@ -22,12 +23,6 @@
         // Custom initialization
     }
     return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSLog(@"FirstPageViewController viewWillAppear called");
 }
 
 - (void)viewDidLoad
@@ -46,6 +41,7 @@
     
     [self.view addSubview:firstLabel];
     [self.view addSubview:firstBtn];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -58,19 +54,19 @@
 - (IBAction)firstBtnClicked:(id)sender
 {
     SecondPageViewController *secondVC = [[SecondPageViewController alloc] init];
-    [self.navigationController pushViewController:secondVC animated:NO];
-    secondVC.firstVC = self;
+    CPNavigationController *cpnav = (CPNavigationController *)self.navigationController;
+    [cpnav pushViewController:secondVC animated:YES action:NAV_ACTION_POPSELF];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
